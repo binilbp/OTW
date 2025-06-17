@@ -1,0 +1,10 @@
+BANDIT
+
+
+bandit0:
+	- connect to the host using  provided host link @ the specified port
+	(password and username is already provided)
+
+	commands -> ssh [-p] 
+		 
+
