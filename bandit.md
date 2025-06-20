@@ -42,6 +42,19 @@ find uinque line in the given file using `uniq`. but for `uniq` to find unique l
 <br>NB: `uniq -[u]` `sort` `|`
 <br>example: piping `ls --help` to `less` is done by `ls --help | pipe` 
 
+### bandit9 :
+find the human readable strings from the file using `strings` also use `grep` to filter out the lines that contain the given characters.(use approx 4 of the given character for grep)
+<br>NB: `strings` `grep`  
+
+### bandit10 :
+decode the given base64 encoded file using `base64` 
+<br>NB: `base64 [-d]` 
+
+### bandit11 :
+rotate alphabet characters of the file to 13th alphabet character coming after it in the alphabet order(this is called ROT13).ie convert a->n, b->0 etc. use `tr` for rotation. NOTE rot13 doesnt usually include nubmers and `tr` also doesnt effect the numbers in the string. `tr` takes string as input.
+<br>NB: `tr` `cat`
+<br>example: `echo "aAbB" | tr somestring 'a-zA-Z' 'b-zaB-ZA'` rotates each character by 1 position and gives output as "bBcC"
+
 
 	
 	 
