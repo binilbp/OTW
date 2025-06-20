@@ -55,6 +55,10 @@ rotate alphabet characters of the file to 13th alphabet character coming after i
 <br>NB: `tr` `cat`
 <br>example: `echo "aAbB" | tr somestring 'a-zA-Z' 'b-zaB-ZA'` rotates each character by 1 position and gives output as "bBcC"
 
+### bandit12 :
+copy the file to a /tmp location so you have neccessary permissions.Decompress the hexdump file to binary using `xxd` and output it to a file. Find type of the output file using `file`.  
+<br>NB: `cat` 
+
 
 	
 	 
