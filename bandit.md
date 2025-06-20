@@ -60,7 +60,7 @@ copy the file to a /tmp location so you have neccessary permissions.Decompress t
 * if file type is tar archive -> rename with ".tar" extension -> extract using `tar`
 * if file type is gzip compressed -> rename with ".gz" extension -> decompress using `gzip`
 * if file type is bzip2 compressed -> rename with ".bz" extension -> decompress using `bzip2`
-<br>NB: `xxd [-r]` `file` `gzip [-d]` `bzip [-d]`  
+<br>NB: `xxd [-r]` `file` `gzip [-d]` `bzip2 [-d]`  
 
 
 	
