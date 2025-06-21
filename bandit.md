@@ -56,7 +56,7 @@ rotate alphabet characters of the file to 13th alphabet character coming after i
 <br>example: `echo "aAbB" | tr somestring 'a-zA-Z' 'b-zaB-ZA'` rotates each character by 1 position and gives output as "bBcC"
 
 ### bandit12 :
-copy the file to a /tmp location so you have neccessary permissions.Decompress the hexdump file to binary using `xxd` and output it to a file. Find type of the output file using `file`.
+copy the file to a /tmp location so you have neccessary permissions. decompress the hexdump file to binary using `xxd` and output it to a file. Find type of the output file using `file`.
 * if file type is tar archive -> rename with ".tar" extension -> extract using `tar`
 * if file type is gzip compressed -> rename with ".gz" extension -> decompress using `gzip`
 * if file type is bzip2 compressed -> rename with ".bz" extension -> decompress using `bzip2`
@@ -71,9 +71,35 @@ connect to given port using netcat. simply enter the current passwd.
 <br>NB: `nc`
 
 ### bandit15 :
-connect to given port using ncat it supports ssl. simply enter the current passwd.
+connect to given port using ncat, it supports ssl. simply enter the current passwd.
 <br>NB: `ncat [--ssl]`
 
+### bandit16 :
+find the open ports using `nmap` default scan (full tcp scan if no sudo) on the given ports range. then check for ssl support by connecting to each open port using `openssl s_client`. only one server is correct but entering the passwd may sometime fail because the first character of the passwd may trigger `s_client` connected commands. ways to prevent this can be found under "connected commands" section of `man openssl s_client`. the output would be a private key for ssh into next level.
+<br>NB: `nmap [-sT] [-p]` `openssl s_client [-connect] [-ign_eof]` 
+
+### bandit17 :
+store the private key from previous level to a file and modify it using `chmod`  to have only 400 permission. this permission number is required for it to be accepted as a ssh key. `ssh` using the file. use `diff` to find the change between the provided two files.
+<br>NB: `chmod 400` `ssh [-p]` `diff` 
+
+### bandit18 :
+ssh can also be used to execute commands even if nologin is specifed. use `cat` to read the contents of file "readme"
+<br>example `ssh username@hostname ls`
+<br>NB: `ssh [-p]` `cat`
+
+### bandit19 :
+`setuid` on an executable allows the file to be executed as the owner of the file even if other user is running the file. the file given here would have `setuid` enabled and can be confirmed by the presence `s` in the permission of the file when using `ls -l`. the executable file given in bandit19 specifically executes any command given as its argument. hence use the executable file to `cat` the content of `/etc/bandit_pass/bandit20` where the passwd for bandit20 is stored.
+<br>NB: `ls -l` `cat`	 
 	 
-	 
+### bandit20 :
+a port have to be created for the provided executable to listen to and we have to pass bandit20 passwd to it. the executable file would then send back the passwd for bandit21
+1. start listening on a port using `nc` . 
+2. pause it using Ctrl + Z and resume it in background using `bg`
+3. connect the executable to the port running `nc` ,also add "&" at the end of the command so that it runs directly in background
+4. bring back `nc` process to foreground using `fg`
+5. enter the bandit20 passwd 
+
+<br>NB: `nc [-l]` `fg` `bg` `jobs` 
+
+
 
