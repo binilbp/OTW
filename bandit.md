@@ -62,8 +62,18 @@ copy the file to a /tmp location so you have neccessary permissions.Decompress t
 * if file type is bzip2 compressed -> rename with ".bz" extension -> decompress using `bzip2`
 <br>NB: `xxd [-r]` `file` `gzip [-d]` `bzip2 [-d]`  
 
+### bandit13 :
+ssh into bandit14 using the given bandit14 private key given. 
+<br>NB: `ssh [-i] [-p]`
 
-	
+### bandit14 :
+connect to given port using netcat. simply enter the current passwd.
+<br>NB: `nc`
+
+### bandit15 :
+connect to given port using ncat it supports ssl. simply enter the current passwd.
+<br>NB: `ncat [--ssl]`
+
 	 
 	 
 
