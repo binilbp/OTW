@@ -101,5 +101,16 @@ a port have to be created for the provided executable to listen to and we have t
 
 <br>NB: `nc [-l]` `fg` `bg` `jobs` 
 
+### bandit21 :
+list the chronjob files in `etc/chron.d/`.list the details of bandit22_chronjob .`cat` the contents of the executable file inside the chronjob file. `cat` the contents of dump file listed in the executable file.
+<br>NB: `ls` `cat`
+
+### bandit22 :
+list the chronjob files in `etc/chron.d/`.list the details of bandit23_chronjob .`cat` the contents of the executable file inside the chronjob file. in the script a string is converted to md5 hashsum, which is then used as the file name for dumping the passwd of bandit23. recreate the hashsum by using "bandit23" instead of $myname.
+<br>NB: `ls` `cat` `md5sum`
+
+### bandit23 :
+list the chronjob files in `etc/chron.d/`.list the details of bandit24_chronjob .`cat` the contents of the executable file inside the chronjob file. the script is owned by bandit24 and this shell program takes script file from a specific location and executes it. find the location. also create a shell script that takes passwd from`/etc/bandit_pass/bandit24` and print it to a file in `/tmp`. remember the file create in `/tmp` would be owned by bandit24 and the neccessary permissions should be given for bandit23(current id) to read the contents(bandit24 passwd) of the file. also remember that the script in the specified location was made by bandit23(current id) and enough permissions have to be given so that bandit24 can execute it. wait for 1 min after this. you may have to wait about 1 min for the shell script to be executed
+<br>NB: `chmod` `vim` `cat` `ls`
 
 
