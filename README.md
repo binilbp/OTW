@@ -1,2 +1,7 @@
-## This Repo is a walkthrough for the Over The Wire (OTW) 
-Only the steps to the answer and command hints are given for each level. No passwords or other credentials are given. If any present, do raise an issue
+Welcome to my personal walkthrough of the OverTheWire wargame levels.
+
+This repository serves as a documentation of the steps I followed to solve each level. The walkthrough is intentionally minimalistic — focusing on core concepts rather than complete solutions. The idea is to provide guidance while still encouraging you to think, experiment, and learn through hands-on effort — which I believe is the most rewarding way to approach these challenges (also meant for me when i will most probably come back after forgetting the steps 😅)
+
+Note: No passwords, flags, or any sensitive credentials are included in this repository. If you happen to spot any such content accidentally exposed, please open an issue so it can be addressed promptly.
+
+Happy hacking! 
