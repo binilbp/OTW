@@ -138,22 +138,29 @@ use the `setuid` enabled file in bandit26 home directory to obtain the passwd fo
 <br>NB: `cat`
 
 ### bandit27 -> 28 :
-clone the git using the `ssh` format with custom port, and `cat` the contents
+clone the git repo using the `ssh` format with custom port, and `cat` the contents
 <br> example `git clone ssh://user@hostname:portnumber/path/to/repo.git`
 <br> `git clone` `cat`
 
 ### bandit28 -> 29 :
-clone the git and go to a previous commit 
+clone the git repo and go to a previous commit 
 <br>NB: `git [log] [checkout]` 
 
 ### bandit29 -> 30 :
-clone the git and change the brach
+clone the git repo and change the brach
 <br>NB: `git [log] [checkout] [branch]` 
 
 ### bandit30 -> 31 :
-clone the git and list the tags and use a tag
-<br>NB: `git [tag] [show *tagname*]
+clone the git repo and list the tags and use a tag
+<br>NB: `git [tag]` `[show *tagname*]`
 
+### bandit31 -> 32 :
+1. clone the git repo.
+2. read the instructions from the file 
+3. create a file according to the instructions
+4. add the file for tracking (you may have to edit the exclusion listed in `.gitignore`)
+5. commit and push 
+<br>NB: `git [clone] [add] [commit] [push]`
 
 
 
