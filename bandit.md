@@ -162,6 +162,13 @@ clone the git repo and list the tags and use a tag
 5. commit and push 
 <br>NB: `git [clone] [add] [commit] [push]`
 
+### bandit32 -> 33 :
+the provided shell is interactive and is converting all input uppercase. uppercase character are usually varaible in a shell env. so we could try calling some variable. a specific variable in `sh` shell allows us to restart the shell by calling it again. use the variable
+<br>NG: `man`
+
+
+
+Yaay !! thats it for bandit. Good job keeping up until the end !
 
 
 
